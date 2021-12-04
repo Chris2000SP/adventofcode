@@ -8,7 +8,6 @@ for number in [int(line) for line in open('input_Day1_2021')]:
         befor = number
         print(str(number) + " N/A")
         continue
-    print(type(number))
     if number < befor:
         print(str(number) + " (decreased)")
     else:
@@ -16,3 +15,5 @@ for number in [int(line) for line in open('input_Day1_2021')]:
         count += 1
         print("count at " + str(count))
     befor = number
+
+print("\nProgram ended with " + str(count))
