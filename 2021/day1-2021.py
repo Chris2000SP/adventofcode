@@ -3,17 +3,16 @@
 befor = None
 count = 0
 
-for line in open('input_Day1_2021'):
+for number in [int(line) for line in open('input_Day1_2021')]:
     if befor == None:
-        befor = int(line)
-        print(str(line) + " N/A")
+        befor = number
+        print(str(number) + " N/A")
         continue
-    line = int(line)
-    print(type(line))
-    if line < befor:
-        print(str(line) + " (decreased)")
+    print(type(number))
+    if number < befor:
+        print(str(number) + " (decreased)")
     else:
-        print(str(line) + " (increased)")
+        print(str(number) + " (increased)")
         count += 1
         print("count at " + str(count))
-    befor = line
+    befor = number
